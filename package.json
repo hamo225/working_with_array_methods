@@ -1,0 +1,19 @@
+{
+  "name": "working_with_array_methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamo225/working_with_array_methods.git"
+  },
+  "author": "Tarek Hamaoui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamo225/working_with_array_methods/issues"
+  },
+  "homepage": "https://github.com/hamo225/working_with_array_methods#readme"
+}
