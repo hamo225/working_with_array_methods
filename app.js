@@ -78,9 +78,39 @@ function doubleMoney() {
   updateDom();
 }
 
+// Sort users by Richest - does not create a new array
+function sortrichest() {
+  data.sort((a, b) => {
+    return b.money - a.money;
+  });
+
+  updateDom();
+}
+
+// filter for millionaires - filter method creats a new array
+function showOnlyMillionaires() {
+  data = data.filter((item) => {
+    return item.money >= 1000000;
+  });
+
+  updateDom();
+}
+
+// Calculate net wealth
+function calcnetwealth() {
+  const total = data.reduce((acc, user) => acc + user.money, 0);
+
+  const wealthEl = document.createElement("div");
+  wealthEl.innerHTML = `<h3>Total Wealth: ${formatMoney(total)}</h3>`;
+  main.appendChild(wealthEl);
+}
+
 // event listeners
 addUser.addEventListener("click", getRandomUser);
 doubleMoneybtn.addEventListener("click", doubleMoney);
+sort.addEventListener("click", sortrichest);
+showMillionaires.addEventListener("click", showOnlyMillionaires);
+netWorth.addEventListener("click", calcnetwealth);
 
 getRandomUser();
 getRandomUser();
